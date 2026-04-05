@@ -496,11 +496,47 @@ body {
 }
 
 @media (max-width: 700px) {
-  .site-nav { width: 100px; }
-  body { padding-left: 100px !important; }
-  .nav-btn { width: 80px; font-size: 11px; }
+  /* hide side nav on mobile */
+  .site-nav {
+    width: 100%;
+    height: 60px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 8px;
+    border-right: none;
+    border-top: 1px solid rgba(201,148,26,0.2);
+    gap: 0;
+  }
+  .nav-logo { display: none; }
+  .nav-divider { display: none; }
+  .nav-btn {
+    width: auto;
+    flex: 1;
+    padding: 8px 4px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .nav-btn .nav-icon { font-size: 20px; margin-bottom: 2px; }
+  body {
+    padding-left: 0 !important;
+    padding-bottom: 70px !important;
+  }
+  .page { max-width: 100% !important; }
   .friends-grid { grid-template-columns: 1fr; }
   .design-page { grid-template-columns: 1fr; }
+  .intro-block { grid-template-columns: 1fr; }
+  .card-inner { padding: 24px 20px; }
 }
 
   /* === LANDING PAGE === */
@@ -698,7 +734,7 @@ body {
           <div class="intro-label">Introduction · 角色簡介</div>
           <p class="intro-text">
             來自愛蘭米爾的符文解讀師，現居夾縫小房間。<br>
-            正在用魔導器誠徵願意一起在生活裡尋找微光的旅伴。<br>
+            正在用魔導器（在現代地球中稱為電腦）誠徵願意一起在生活裡尋找微光的旅伴。<br>
           </p>
           <div class="lore-quote" style="margin-top:16px; margin-bottom:0;">
             <p>「收集美好的生活碎片，釀成屬於你的光。」</p>
